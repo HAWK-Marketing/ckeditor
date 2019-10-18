@@ -17,7 +17,7 @@ class CkeditorAsset extends AssetBundle
      */
     public function init()
     {
-        $this->sourcePath = dirname(__DIR__, 3).'/lib/ckeditor/dist';
+        $this->sourcePath = dirname(__DIR__, 3).'/lib/ckeditor/build';
         $this->js = [
             'ckeditor.js',
         ];

@@ -15,6 +15,26 @@
         options: ckeditorConfigOptions,
         value: field.ckeditorConfig
     }) }}
+
+    {{ forms.checkboxSelectField({
+        id: 'availableVolumes',
+        name: 'availableVolumes',
+        label: 'Available Volumes'|t('redactor'),
+        instructions: 'The volumes that should be available when selecting assets (if the selected config has an Image or File button).'|t('redactor'),
+        options: volumeOptions,
+        values: field.availableVolumes,
+        showAllOption: volumeOptions|length ? true : false
+    }) }}
+
+    {{ forms.checkboxSelectField({
+        id: 'availableTransforms',
+        name: 'availableTransforms',
+        label: 'Available Transforms'|t('redactor'),
+        instructions: 'The Transforms that should be available for Image selection.'|t('redactor'),
+        options: transformOptions,
+        values: field.availableTransforms,
+        showAllOption: transformOptions|length ? true : false
+    }) }}
 </div>
 
 {{ forms.checkboxField({
